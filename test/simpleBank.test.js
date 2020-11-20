@@ -39,7 +39,7 @@ contract('SimpleBank', function(accounts) {
     await instance.deposit({from: alice, value: deposit})
     const balance = await instance.getBalance({from: alice})
 
-    assert.equal(deposit.toString(), balance, 'deposit amount incorrect, check deposit method')
+    assert.equal(deposit.toString(), balance.toString(), 'deposit amount incorrect, check deposit method')
   })
 
   it("should log a deposit event when a deposit is made", async() => {
